@@ -1,0 +1,19 @@
+attendance_system_mvp/
+├── db/
+│   └── attendance.db  # SQLite database for storing student data and attendance logs
+├── images/
+│   ├── train_imgs/    # Folder for registration images
+│   │   ├── train_img_1.jpg
+│   │   ├── train_img_2.jpg
+│   │   └── ...        # Add more student images here
+│   └── input_imgs/    # Folder for attendance input images
+│       ├── input_img_1.jpg
+│       └── ...        # Add more input images here
+├── src/
+│   ├── db_setup.py    # Initializes SQLite database
+│   ├── extract_embedding.py  # Extracts eye region and embedding
+│   ├── register_student.py   # Registers students in the database
+│   ├── mark_attendance.py    # Matches embeddings and logs attendance
+│   └── visualize_eye_region.py  # Visualizes eye region for debugging
+├── config.py          # Configuration settings (e.g., paths, model names)
+└── main.py            # Main script to test registration and attendance
