@@ -1,4 +1,8 @@
 import logging
+import warnings
+
+# Ignore warnings
+warnings.filterwarnings("ignore")
 
 # Configure logging
 logging.basicConfig(

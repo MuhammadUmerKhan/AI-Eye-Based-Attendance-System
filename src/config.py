@@ -4,6 +4,9 @@ import os
 DATABASE_PATH = os.path.join("..", "database", "attendance.db")
 TRAIN_IMAGES_DIR = os.path.join("..", "images", "train_imgs")
 INPUT_IMAGES_DIR = os.path.join("..", "images", "input_imgs")
+FAISS_INDEX_PATH = os.path.join("..", "database", "faiss_index.bin")  # Path to save FAISS index
+
 LOG_FILE = os.path.join("..", "logs", "attendance.log")
+
 DEEPFACE_MODEL = "ArcFace"  # DeepFace model for embedding extraction
-FAISS_THRESHOLD = 0.4       # L2 distance threshold for matchingQ
+FAISS_THRESHOLD = 0.4       # L2 distance threshold for matching
