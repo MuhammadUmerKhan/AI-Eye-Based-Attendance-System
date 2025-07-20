@@ -12,19 +12,20 @@ def save_image(file, output_path):
     Returns success status and message.
     """
     try:
-        # Read the uploaded file
+        logger.debug(f"Saving image to {output_path}")
         file_bytes = np.asarray(bytearray(file.read()), dtype=np.uint8)
         img = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
+        if img is None:
+            logger.error({"message": f"Failed to decode image from {output_path}"})
+            return False, "Failed to decode image"
         
-        # Ensure output directory exists
+        logger.debug(f"Decoded image shape: {img.shape}")
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
-        
-        # Save image
         cv2.imwrite(output_path, img)
-        logger.info(f"Image saved to {output_path}")
+        logger.info({"message": f"Image saved to {output_path}"})
         return True, f"Image saved to {output_path}"
     except Exception as e:
-        logger.error(f"Failed to save image to {output_path}: {str(e)}")
+        logger.error({"error": str(e), "message": f"Failed to save image to {output_path}"})
         return False, f"Failed to save image: {str(e)}"
 
 def cleanup_temp_image(image_path):
@@ -32,8 +33,11 @@ def cleanup_temp_image(image_path):
     Delete a temporary image file.
     """
     try:
+        logger.debug(f"Attempting to delete temporary image: {image_path}")
         if os.path.exists(image_path):
             os.remove(image_path)
-            logger.info(f"Temporary image deleted: {image_path}")
+            logger.info({"message": f"Temporary image deleted: {image_path}"})
+        else:
+            logger.warning({"message": f"Temporary image not found: {image_path}"})
     except Exception as e:
-        logger.error(f"Failed to delete temporary image {image_path}: {str(e)}")
+        logger.error({"error": str(e), "message": f"Failed to delete temporary image {image_path}"})
