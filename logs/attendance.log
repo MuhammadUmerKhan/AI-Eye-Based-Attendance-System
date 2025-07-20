@@ -1,0 +1,63 @@
+2025-07-20 14:39:57,434 - WARNING - From C:\AI-Eye-Based-Attendance-System\.venv\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-07-20 14:39:59,504 - INFO - Loading faiss with AVX2 support.
+2025-07-20 14:39:59,536 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-20 14:39:59,545 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-20 14:39:59,547 - INFO - {'message': 'Database tables initialized'}
+2025-07-20 14:39:59,547 - INFO - {'message': 'Connected to SQLite database at ..\\database\\attendance.db'}
+2025-07-20 14:39:59,548 - INFO - {'message': 'Database tables initialized'}
+2025-07-20 14:39:59,548 - INFO - {'message': 'Connected to SQLite database at ..\\database\\attendance.db'}
+2025-07-20 14:39:59,548 - INFO - {'message': 'Database tables initialized'}
+2025-07-20 14:39:59,548 - INFO - {'message': 'Database initialized successfully'}
+2025-07-20 14:39:59,548 - INFO - {'message': 'Database connection closed'}
+2025-07-20 14:39:59,549 - INFO - Extracting embedding for image: ..\images\train_imgs\123.jpg
+2025-07-20 14:40:03,994 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-20 14:40:04,006 - INFO - {'student_id': '123', 'message': 'Student John Doe registered successfully', 'embedding_shape': (512,), 'embedding_dtype': 'float32', 'embedding_summary': '[-0.19283742, 0.4234904, -0.13443115, -0.39448246, 0.0984613, ..., -0.28931275, 0.054349188, -0.035751276, -0.3439401, -0.8825445]'}
+2025-07-20 14:40:04,006 - INFO - {'student_id': '123', 'message': 'Student John Doe (ID: 123) registered successfully', 'embedding_shape': (512,)}
+2025-07-20 14:40:04,007 - INFO - {'message': 'Student John Doe (ID: 123) registered successfully'}
+2025-07-20 14:40:04,007 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-20 14:40:04,008 - INFO - {'count': 1, 'message': 'Fetched student data'}
+2025-07-20 14:40:04,009 - INFO - {'message': 'FAISS index built and saved to ..\\database\\faiss_index.bin', 'embedding_count': 1, 'dimension': 512}
+2025-07-20 14:40:04,009 - INFO - Extracting embedding for image: ..\images\train_imgs\123.jpg
+2025-07-20 14:40:04,409 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-20 14:40:04,410 - INFO - {'student_id': '123', 'message': 'FAISS index updated', 'embedding_count': 2, 'dimension': 512}
+2025-07-20 14:40:04,411 - INFO - {'message': 'Database connection closed'}
+2025-07-20 14:40:49,868 - WARNING - From C:\AI-Eye-Based-Attendance-System\.venv\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-07-20 14:40:52,439 - INFO - Loading faiss with AVX2 support.
+2025-07-20 14:40:52,478 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-20 14:40:52,490 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-20 14:40:52,497 - INFO - {'message': 'Database tables initialized'}
+2025-07-20 14:40:52,497 - INFO - {'message': 'Connected to SQLite database at ..\\database\\attendance.db'}
+2025-07-20 14:40:52,498 - INFO - {'message': 'Fetching student data from database'}
+2025-07-20 14:40:52,498 - INFO - {'count': 1, 'message': 'Fetched student data'}
+2025-07-20 14:40:52,498 - INFO - {'student_id': '123', 'name': 'John Doe', 'message': 'Displayed student data', 'embedding_shape': (512,), 'embedding_dtype': 'float32', 'embedding_summary': '[-0.19283742, 0.4234904, -0.13443115, -0.39448246, 0.0984613, ..., -0.28931275, 0.054349188, -0.035751276, -0.3439401, -0.8825445]'}
+2025-07-20 14:40:52,500 - INFO - {'count': 1, 'message': 'Completed fetching and displaying students'}
+2025-07-20 14:40:52,500 - INFO - {'message': 'Database connection closed'}
+2025-07-20 14:41:15,399 - WARNING - From C:\AI-Eye-Based-Attendance-System\.venv\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-07-20 14:41:17,458 - INFO - Loading faiss with AVX2 support.
+2025-07-20 14:41:17,488 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-20 14:41:17,496 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-20 14:41:17,497 - INFO - {'message': 'Database tables initialized'}
+2025-07-20 14:41:17,497 - INFO - {'message': 'Connected to SQLite database at ..\\database\\attendance.db'}
+2025-07-20 14:41:17,498 - INFO - {'message': 'Database tables initialized'}
+2025-07-20 14:41:17,500 - INFO - {'message': 'Connected to SQLite database at ..\\database\\attendance.db'}
+2025-07-20 14:41:17,500 - INFO - {'message': 'Database tables initialized'}
+2025-07-20 14:41:17,500 - INFO - {'message': 'Database initialized successfully'}
+2025-07-20 14:41:17,500 - INFO - {'message': 'Database connection closed'}
+2025-07-20 14:41:17,500 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-20 14:41:17,500 - INFO - {'count': 1, 'message': 'Fetched student data'}
+2025-07-20 14:41:17,502 - INFO - {'message': 'FAISS index built and saved to ..\\database\\faiss_index.bin', 'embedding_count': 1, 'dimension': 512}
+2025-07-20 14:41:17,502 - INFO - Extracting embedding for image: ..\images\train_imgs\123.jpg
+2025-07-20 14:41:21,963 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-20 14:41:21,964 - INFO - {'student_id': '123', 'message': 'FAISS index updated', 'embedding_count': 2, 'dimension': 512}
+2025-07-20 14:41:21,964 - INFO - Extracting embedding for image: ..\images\train_imgs\123.jpg
+2025-07-20 14:41:22,370 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-20 14:41:22,370 - INFO - {'count': 1, 'message': 'Fetched student data'}
+2025-07-20 14:41:22,370 - INFO - {'count': 1, 'message': 'Fetched student data for attendance', 'query_embedding_shape': (512,)}
+2025-07-20 14:41:22,409 - INFO - {'message': 'FAISS search completed', 'distances': [[0.0]], 'indices': [[0]], 'dimension': 512}
+2025-07-20 14:41:22,419 - INFO - {'student_id': '123', 'message': 'Attendance marked'}
+2025-07-20 14:41:22,419 - INFO - {'student_id': '123', 'name': 'John Doe', 'distance': 0.0, 'message': 'Attendance marked for John Doe'}
+2025-07-20 14:41:22,420 - INFO - {'message': 'Attendance marked for John Doe (ID: 123)'}
+2025-07-20 14:41:22,420 - INFO - {'message': 'Database connection closed'}
