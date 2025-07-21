@@ -1,0 +1,152 @@
+/* General Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1F2633; /* Dark Blue Gray */
+    color: #E6ECF1; /* Cloud White */
+    margin: 0;
+    padding: 0;
+}
+
+/* Main App Container */
+.stApp {
+    background-color: #2C3542; /* Slightly lighter than body */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Headings and Labels */
+h1, h2, h3, h4, h5, h6, label, .stTextInput label {
+    color: #FFFFFF !important; /* Strong White */
+}
+
+/* Input Fields */
+.stTextInput > div > div > input {
+    background-color: #2C3542;
+    color: #FFFFFF !important;
+    border: 2px solid #3D4B5F;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: #00CFFF;
+    box-shadow: 0 0 5px rgba(0, 207, 255, 0.4);
+    outline: none;
+}
+
+/* Form Container */
+.stForm {
+    background-color: #2C3542;
+    border: 1px solid #3D4B5F;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* File Uploader */
+.stFileUploader > div > div {
+    border: 2px dashed #3D4B5F;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    background-color: #2C3542;
+    transition: border-color 0.3s ease;
+    color: #E6ECF1;
+}
+
+.stFileUploader > div > div:hover {
+    border-color: #00CFFF;
+}
+
+/* Tabs Styling */
+.stTabs [role="tablist"] {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.stTabs [role="tab"] {
+    background-color: #3A4554;
+    color: #E6ECF1;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.stTabs [role="tab"][aria-selected="true"] {
+    background-color: #00CFFF;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.stTabs [role="tab"]:hover {
+    background-color: #4C5A6B;
+    cursor: pointer;
+}
+
+/* Primary Button */
+button[kind="primary"] {
+    background-color: #00CFFF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[kind="primary"]:hover {
+    background-color: #00AACC;
+    transform: translateY(-2px);
+}
+
+/* Success Message */
+.stSuccess {
+    background-color: #1E3B3A;
+    color: #C2FBE0;
+    border-left: 4px solid #00CFFF;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* Error Message */
+.stError {
+    background-color: #402C2C;
+    color: #F56262;
+    border-left: 4px solid #F56262;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .stApp {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .stTabs [role="tab"] {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    button[kind="primary"] {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
