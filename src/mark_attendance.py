@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 # Configure logging
 logger = get_logger(__name__)
 
-def mark_attendance(db, image_input, faiss_index: FaissIndex, course_id: str) -> Tuple[Optional[str], Optional[str], str]:
+def mark_attendance(db, image_input, faiss_index: FaissIndex, course_id: str) -> Tuple[Optional[int], Optional[str], str]:
     """
     Match an image's embedding against stored embeddings for a specific course and mark attendance.
     Accepts a Database instance, image input (file path or file-like object), a FaissIndex instance, and course_id.
