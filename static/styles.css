@@ -1,37 +1,64 @@
 /* General Styling */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #F9F7F3; /* Warm off-white background */
-    color: #264653; /* Deep charcoal text */
+    background-color: #1F2633; /* Dark Blue Gray */
+    color: #E6ECF1; /* Cloud White */
     margin: 0;
     padding: 0;
 }
 
-/* Centered Layout for Streamlit */
+/* Main App Container */
 .stApp {
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: #ffffff; /* White container for contrast */
+    background-color: #2C3542; /* Slightly lighter than body */
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     padding: 20px;
+    max-width: 900px;
+    margin: auto;
 }
 
-/* Title Styling */
-h1 {
-    font-size: 2.5rem;
-    color: #000000; /* Black for title */
+/* Headings and Labels */
+h1, h2, h3, h4, h5, h6, label, .stTextInput label {
+    color: #FFFFFF !important; /* Strong White */
+}
+
+/* Input Fields */
+.stTextInput > div > div > input {
+    background-color: #2C3542;
+    color: #FFFFFF !important;
+    border: 2px solid #3D4B5F;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: #00CFFF;
+    box-shadow: 0 0 5px rgba(0, 207, 255, 0.4);
+    outline: none;
+}
+
+/* Form Container */
+.stForm {
+    background-color: #2C3542;
+    border: 1px solid #3D4B5F;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* File Uploader */
+.stFileUploader > div > div {
+    border: 2px dashed #3D4B5F;
+    border-radius: 8px;
+    padding: 15px;
     text-align: center;
-    margin-bottom: 20px;
-    font-weight: 700;
+    background-color: #2C3542;
+    transition: border-color 0.3s ease;
+    color: #E6ECF1;
 }
 
-/* Subheader Styling */
-h2 {
-    font-size: 1.5rem;
-    color: #000000; /* Black for subheaders */
-    margin-bottom: 15px;
-    font-weight: 600;
+.stFileUploader > div > div:hover {
+    border-color: #00CFFF;
 }
 
 /* Tabs Styling */
@@ -43,8 +70,8 @@ h2 {
 }
 
 .stTabs [role="tab"] {
-    background-color: #E9ECEF; /* Light gray for inactive tabs */
-    color: #264653; /* Deep charcoal text */
+    background-color: #3A4554;
+    color: #E6ECF1;
     padding: 10px 20px;
     border-radius: 8px;
     font-weight: 500;
@@ -52,56 +79,20 @@ h2 {
 }
 
 .stTabs [role="tab"][aria-selected="true"] {
-    background-color: #2A9D8F; /* Soft teal for active tab */
-    color: #ffffff; /* White text for contrast */
+    background-color: #00CFFF;
+    color: #FFFFFF;
     font-weight: 600;
 }
 
 .stTabs [role="tab"]:hover {
-    background-color: #DDE1E4; /* Slightly darker gray on hover */
+    background-color: #4C5A6B;
     cursor: pointer;
 }
 
-/* Form Styling */
-.stForm {
-    background-color: #F9F7F3; /* Warm off-white form background */
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #141414; /* Light gray border */
-}
-
-/* Input Fields */
-.stTextInput > div > div > input {
-    border: 2px solid #DDE1E4; /* Light gray border */
-    border-radius: 8px;
-    padding: 10px;
-    font-size: 1rem;
-    color: #e0e4e8; /* Deep charcoal text */
-    transition: border-color 0.3s ease;
-}
-
-.stTextInput > div > div > input {
-    color: #ffffff !important; /* White text inside input */
-    background-color: #363738 !important; /* Optional: dark background for contrast */
-}
-/* File Uploader */
-.stFileUploader > div > div {
-    border: 2px dashed #DDE1E4; /* Light gray dashed border */
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    background-color: #F9F7F3; /* Warm off-white background */
-    transition: border-color 0.3s ease;
-}
-
-.stFileUploader > div > div:hover {
-    border-color: #2A9D8F; /* Soft teal on hover */
-}
-
-/* Button Styling */
+/* Primary Button */
 button[kind="primary"] {
-    background-color: #2A9D8F; /* Soft teal button */
-    color: #ffffff; /* White text */
+    background-color: #00CFFF;
+    color: #FFFFFF;
     border: none;
     border-radius: 8px;
     padding: 10px 20px;
@@ -111,37 +102,28 @@ button[kind="primary"] {
 }
 
 button[kind="primary"]:hover {
-    background-color: #247B7B; /* Darker teal on hover */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #00AACC;
+    transform: translateY(-2px);
 }
 
-/* Success and Error Messages */
+/* Success Message */
 .stSuccess {
-    background-color: #E9F5DB; /* Light green for success */
-    color: #264653; /* Deep charcoal text */
-    border-left: 4px solid #2A9D8F; /* Teal border */
+    background-color: #1E3B3A;
+    color: #C2FBE0;
+    border-left: 4px solid #00CFFF;
     padding: 10px;
     border-radius: 5px;
     font-weight: 500;
 }
 
+/* Error Message */
 .stError {
-    background-color: #FFE5E5; /* Soft coral for error */
-    color: #E76F51; /* Red text */
-    border-left: 4px solid #E76F51; /* Red border */
+    background-color: #402C2C;
+    color: #F56262;
+    border-left: 4px solid #F56262;
     padding: 10px;
     border-radius: 5px;
     font-weight: 500;
-}
-
-/* Force all headings to black (including inside forms) */
-h1, h2, h3, h4, h5, h6, label, .stTextInput label {
-    color: #000000 !important;
-}
-
-@keyframes balloonFade {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
 }
 
 /* Responsive Design */
