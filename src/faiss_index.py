@@ -32,7 +32,7 @@ class FaissIndex:
         
         Args:
             embeddings (np.ndarray): Array of student embeddings.
-            student_ids (list): List of student IDs.
+            student_ids (list): List of student IDs (integers).
             names (list): List of student names.
             course_id (str): Course identifier.
         """
@@ -90,13 +90,13 @@ class FaissIndex:
             logger.error({"error": str(e), "message": f"Failed to load FAISS index for course {course_id}"})
             self.indices[course_id] = (None, [], [])
 
-    def update_index(self, embedding: np.ndarray, student_id: str, name: str, course_id: str):
+    def update_index(self, embedding: np.ndarray, student_id: int, name: str, course_id: str):
         """
         Add a new embedding to the FAISS index for a specific course.
         
         Args:
             embedding (np.ndarray): New student embedding.
-            student_id (str): Student ID.
+            student_id (int): Student ID.
             name (str): Student name.
             course_id (str): Course identifier.
         """

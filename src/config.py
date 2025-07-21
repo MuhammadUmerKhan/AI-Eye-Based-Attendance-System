@@ -12,8 +12,9 @@ def get_faiss_index_path(course_id: str) -> str:
     return os.path.join("database", f"faiss_index_{course_id}.bin")
 
 INPUT_IMAGES_DIR = os.path.join("images", "input_imgs")
-TRAIN_IMAGES_DIT = os.path.join("images", "test_imgs")
+TRAIN_IMAGES_DIR = os.path.join("images", "test_imgs")
 LOG_FILE = os.path.join("logs", "attendance.log")
+STATIC_PATH = os.path.join("static", "styles.css")
 DEEPFACE_MODEL = "ArcFace"
 FAISS_THRESHOLD = 0.4
 EMBEDDING_DIM = 512

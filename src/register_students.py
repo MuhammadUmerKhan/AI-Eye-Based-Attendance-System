@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore")
 # Configure logging
 logger = get_logger(__name__)
 
-def register_student(db, student_id: str, name: str, course_id: str, course_name: str, image_input, faiss_index: FaissIndex) -> Tuple[bool, str]:
+def register_student(db, student_id: int, name: str, course_id: str, course_name: str, image_input, faiss_index: FaissIndex) -> Tuple[bool, str]:
     """
     Register a student by saving their ID, name, course details, and eye region embedding to the database,
     and update the FAISS index for the specific course.

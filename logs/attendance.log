@@ -205,3 +205,191 @@
 2025-07-21 12:48:00,152 - INFO - {'student_id': '123', 'name': 'Zuhair', 'course_id': 'GD', 'distance': 0.0, 'message': 'Attendance marked for Zuhair'}
 2025-07-21 12:48:00,152 - INFO - {'message': '\u2705 Attendance marked for Zuhair (ID: 123) in course GD'}
 2025-07-21 12:48:00,155 - INFO - {'message': 'Temporary image deleted: images\\input_imgs\\temp_20250721_124758.jpg'}
+2025-07-21 14:02:36,504 - INFO - {'message': 'Main app page loaded'}
+2025-07-21 14:03:37,266 - WARNING - From C:\AI-Eye-Based-Attendance-System\.venv\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-07-21 14:05:24,410 - INFO - Loading faiss with AVX2 support.
+2025-07-21 14:05:24,939 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-21 14:05:24,951 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-21 14:05:48,094 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:05:48,094 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:05:48,095 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:05:48,095 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 14:05:48,095 - INFO - {'message': 'Database connection closed'}
+2025-07-21 14:05:48,097 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:05:48,097 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:05:48,098 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 14:05:48,100 - INFO - {'count': 1, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 14:05:48,101 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 1}
+2025-07-21 14:05:48,102 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 14:05:48,104 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}
+2025-07-21 14:05:48,104 - INFO - {'message': 'Initialized FAISS indices for all courses'}
+2025-07-21 14:13:29,787 - INFO - Loading faiss with AVX2 support.
+2025-07-21 14:13:29,819 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-21 14:13:29,828 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-21 14:13:29,847 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:13:29,847 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:13:29,848 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:13:29,848 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 14:13:29,848 - INFO - {'message': 'Database connection closed'}
+2025-07-21 14:13:29,850 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:13:29,850 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:13:29,852 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 14:13:29,854 - INFO - {'count': 1, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 14:13:29,856 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 1}
+2025-07-21 14:13:29,857 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 14:13:29,858 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}
+2025-07-21 14:13:29,858 - INFO - {'message': 'Initialized FAISS indices for all courses'}
+2025-07-21 14:22:00,090 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:22:00,090 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:22:00,090 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:22:00,091 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 14:22:00,091 - INFO - {'message': 'Database connection closed'}
+2025-07-21 14:22:00,092 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:22:00,092 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:22:00,092 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 14:22:00,093 - INFO - {'count': 1, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 14:22:00,094 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 1}
+2025-07-21 14:22:00,095 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 14:22:00,096 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}
+2025-07-21 14:22:00,096 - INFO - {'message': 'Initialized FAISS indices for all courses'}
+2025-07-21 14:26:12,838 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:26:12,839 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:26:12,839 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:26:12,840 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 14:26:12,840 - INFO - {'message': 'Database connection closed'}
+2025-07-21 14:26:12,843 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:26:12,843 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:26:12,844 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 14:26:12,846 - INFO - {'count': 1, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 14:26:12,851 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 1}
+2025-07-21 14:26:12,852 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 14:26:12,855 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}
+2025-07-21 14:26:12,855 - INFO - {'message': 'Initialized FAISS indices for all courses'}
+2025-07-21 14:26:50,235 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:26:50,235 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:26:50,236 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:26:50,237 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 14:26:50,237 - INFO - {'message': 'Database connection closed'}
+2025-07-21 14:26:50,240 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:26:50,240 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:26:50,241 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 14:26:50,243 - INFO - {'count': 1, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 14:26:50,253 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 1}
+2025-07-21 14:26:50,253 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 14:26:50,255 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}
+2025-07-21 14:26:50,255 - INFO - {'message': 'Initialized FAISS indices for all courses'}
+2025-07-21 14:29:16,574 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:29:16,574 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:29:16,577 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:29:16,577 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 14:29:16,578 - INFO - {'message': 'Database connection closed'}
+2025-07-21 14:29:16,582 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:29:16,583 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:29:16,586 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 14:29:16,588 - INFO - {'count': 1, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 14:29:16,608 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 1}
+2025-07-21 14:29:16,610 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 14:29:16,612 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}
+2025-07-21 14:29:16,612 - INFO - {'message': 'Initialized FAISS indices for all courses'}
+2025-07-21 14:37:43,572 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:37:43,572 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:37:43,573 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:37:43,573 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 14:37:43,573 - INFO - {'message': 'Database connection closed'}
+2025-07-21 14:37:43,576 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:37:43,576 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:37:43,577 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 14:37:43,580 - INFO - {'count': 1, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 14:37:43,588 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 1}
+2025-07-21 14:37:43,589 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 14:37:43,591 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}
+2025-07-21 14:39:24,518 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:39:24,518 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:39:24,519 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:39:24,520 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 14:39:24,520 - INFO - {'message': 'Database connection closed'}
+2025-07-21 14:44:54,394 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:44:54,396 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:44:54,397 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:44:54,397 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 14:44:54,398 - INFO - {'message': 'Database connection closed'}
+2025-07-21 14:44:54,400 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 14:44:54,400 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 14:44:54,402 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 14:44:54,403 - INFO - {'count': 1, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 14:44:54,405 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 1}
+2025-07-21 14:44:54,406 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 14:44:54,409 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}
+2025-07-21 15:25:37,525 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 15:25:37,526 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 15:25:37,526 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 15:25:37,526 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 15:25:37,527 - INFO - {'message': 'Database connection closed'}
+2025-07-21 15:25:37,528 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 15:25:37,528 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 15:25:37,530 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 15:25:37,532 - INFO - {'count': 1, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 15:25:37,534 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 1}
+2025-07-21 15:25:37,535 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 15:25:37,537 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}
+2025-07-21 15:28:59,817 - INFO - {'message': 'Image saved to images\\input_imgs\\AI\\khan.jpg'}
+2025-07-21 15:28:59,821 - INFO - Extracting embedding for image
+2025-07-21 15:29:08,832 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 15:29:08,847 - INFO - {'student_id': 'khan', 'course_id': 'AI', 'message': 'Student Zuhair  khan registered successfully'}
+2025-07-21 15:29:08,849 - INFO - {'student_id': 'khan', 'course_id': 'AI', 'message': 'FAISS index updated', 'embedding_count': 2}
+2025-07-21 15:29:08,849 - INFO - {'student_id': 'khan', 'course_id': 'AI', 'message': 'Student Zuhair  khan (ID: khan) registered successfully for Artificial Intelligence and FAISS index updated'}
+2025-07-21 15:59:16,220 - INFO - {'message': 'Image saved to images\\input_imgs\\temp_20250721_155916.jpg'}
+2025-07-21 15:59:16,220 - INFO - Extracting embedding for image
+2025-07-21 15:59:17,684 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 15:59:17,684 - INFO - {'count': 2, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 15:59:17,684 - INFO - {'count': 2, 'message': 'Fetched student data for attendance in course AI'}
+2025-07-21 15:59:17,790 - INFO - {'course_id': 'AI', 'message': 'FAISS search completed', 'distances': [[0.06436136364936829]], 'indices': [[0]]}
+2025-07-21 15:59:17,804 - INFO - {'student_id': '123', 'course_id': 'AI', 'message': 'Attendance marked'}
+2025-07-21 15:59:17,804 - INFO - {'student_id': '123', 'name': 'Umer', 'course_id': 'AI', 'distance': 0.06436136, 'message': 'Attendance marked for Umer'}
+2025-07-21 15:59:17,807 - INFO - {'message': 'Temporary image deleted: images\\input_imgs\\temp_20250721_155916.jpg'}
+2025-07-21 16:13:08,504 - INFO - {'message': 'Image saved to images\\input_imgs\\temp_20250721_161308.jpg'}
+2025-07-21 16:13:08,505 - INFO - Extracting embedding for image
+2025-07-21 16:13:09,131 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 16:13:09,131 - INFO - {'count': 2, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 16:13:09,131 - INFO - {'count': 2, 'message': 'Fetched student data for attendance in course AI'}
+2025-07-21 16:13:09,131 - INFO - {'course_id': 'AI', 'message': 'FAISS search completed', 'distances': [[0.06436136364936829]], 'indices': [[0]]}
+2025-07-21 16:13:09,151 - INFO - {'student_id': '123', 'course_id': 'AI', 'message': 'Attendance marked'}
+2025-07-21 16:13:09,152 - INFO - {'student_id': '123', 'name': 'Umer', 'course_id': 'AI', 'distance': 0.06436136, 'message': 'Attendance marked for Umer'}
+2025-07-21 16:13:09,153 - INFO - {'message': 'Temporary image deleted: images\\input_imgs\\temp_20250721_161308.jpg'}
+2025-07-21 16:32:33,742 - INFO - {'message': 'Image saved to images\\input_imgs\\temp_20250721_163233.jpg'}
+2025-07-21 16:32:33,743 - INFO - Extracting embedding for image
+2025-07-21 16:32:34,760 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 16:32:34,761 - INFO - {'count': 2, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 16:32:34,761 - INFO - {'count': 2, 'message': 'Fetched student data for attendance in course AI'}
+2025-07-21 16:32:34,761 - INFO - {'course_id': 'AI', 'message': 'FAISS search completed', 'distances': [[0.06436136364936829]], 'indices': [[0]]}
+2025-07-21 16:32:34,784 - INFO - {'student_id': '123', 'course_id': 'AI', 'message': 'Attendance marked'}
+2025-07-21 16:32:34,784 - INFO - {'student_id': '123', 'name': 'Umer', 'course_id': 'AI', 'distance': 0.06436136, 'message': 'Attendance marked for Umer'}
+2025-07-21 16:32:34,786 - INFO - {'message': 'Temporary image deleted: images\\input_imgs\\temp_20250721_163233.jpg'}
+2025-07-21 16:34:39,569 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 16:34:39,569 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 16:34:39,569 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 16:34:39,570 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 16:34:39,570 - INFO - {'message': 'Database connection closed'}
+2025-07-21 16:34:39,572 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 16:34:39,573 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 16:34:39,574 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 16:34:39,576 - INFO - {'count': 2, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 16:34:39,582 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 2}
+2025-07-21 16:34:39,583 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 16:34:39,584 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}
+2025-07-21 16:39:53,567 - INFO - Loading faiss with AVX2 support.
+2025-07-21 16:39:53,657 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-21 16:39:53,669 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-21 16:39:53,764 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 16:39:53,764 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 16:39:53,765 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 16:39:53,765 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 16:39:53,765 - INFO - {'message': 'Database connection closed'}
+2025-07-21 16:39:53,767 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 16:39:53,767 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 16:39:53,768 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 16:39:53,769 - INFO - {'count': 2, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 16:39:53,771 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 2}
+2025-07-21 16:39:53,772 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 16:39:53,773 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}
