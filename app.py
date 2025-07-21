@@ -1,20 +1,45 @@
 import streamlit as st
-from src.register_students import register_student
+from src.register_students import register_studentss
 from src.mark_attendance import mark_attendance
 from src.utils import save_image, cleanup_temp_image
 from src.database import Database
 from src.faiss_index import FaissIndex
 from src.config import TRAIN_IMAGES_DIR, INPUT_IMAGES_DIR
 from src.logger import get_logger
+from src.db_setup import init_database
 from datetime import datetime
-import os
-from typing import Any
+import os, faiss, numpy as np
 
 # Configure logging
 logger = get_logger(__name__)
 
 # Initialize database
+logger.debug("Initializing database in app.py")
+success, message = init_database()
+if not success:
+    logger.error({"message": message})
+    st.error(message)
+    st.stop()
+
+# Initialize database connection
 db = Database()
+
+# Initialize FAISS index
+logger.debug("Initializing FAISS index in app.py")
+faiss_index = FaissIndex()
+# Load or build FAISS index with existing students
+students = db.fetch_students()
+if students:
+    logger.debug("Building FAISS index with existing students")
+    embeddings = np.array([student['embedding'] for student in students], dtype=np.float32)
+    student_ids = [student['id'] for student in students]
+    names = [student['name'] for student in students]
+    faiss_index.build_index(embeddings, student_ids, names)
+else:
+    logger.debug("No students found, initializing empty FAISS index with dimension 512")
+    faiss_index.dimension = 512
+    faiss_index.index = faiss.IndexFlatL2(512)
+    logger.info({"message": "Initialized empty FAISS index with dimension 512"})
 
 st.set_page_config(page_title="AI Attendance System", layout="centered")
 
@@ -47,7 +72,7 @@ with tab1:
                     st.error(message)
                 else:
                     logger.info({"roll_no": roll_no, "message": f"🖼️ Image saved at {image_path}"})
-                    success, message = register_student(db, roll_no, name, department, image_file)
+                    success, message = register_studentss(db, roll_no, name, department, image_path, faiss_index)
                     if success:
                         logger.info({"roll_no": roll_no, "message": f"✅ {message}"})
                         st.success(f"✅ {message}")
@@ -74,7 +99,7 @@ with tab2:
                 st.error(message)
             else:
                 logger.info({"message": f"🖼️ Temporary image saved at {temp_image_path}"})
-                student_id, name, message = mark_attendance(db, temp_image_path, FaissIndex())
+                student_id, name, message = mark_attendance(db, temp_image_path, faiss_index)
                 if student_id:
                     logger.info({"message": f"✅ {message}"})
                     st.success(f"✅ {message}")
