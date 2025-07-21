@@ -2,8 +2,8 @@ import numpy as np
 import faiss
 import os
 import warnings
-from config import FAISS_INDEX_PATH
-from logger import get_logger
+from src.config import FAISS_INDEX_PATH, EMBEDDING_DIM
+from src.logger import get_logger
 
 # Configure logging
 logger = get_logger(__name__)
@@ -23,6 +23,7 @@ class FaissIndex:
             self.student_ids = []
             self.names = []
             self.dimension = None
+            self.load_index()
             logger.info({"message": "FaissIndex initialized successfully"})
         except Exception as e:
             logger.error({"error": str(e), "message": "Failed to initialize FaissIndex"})
@@ -38,7 +39,7 @@ class FaissIndex:
             names (list): List of student names.
         """
         try:
-            logger.debug(f"Building FAISS index with {len(embeddings)} embeddings, shape: {embeddings.shape}")
+            logger.debug(f"Building FAISS index with {len(embeddings)} embeddings")
             if embeddings.size == 0:
                 logger.warning({"message": "No embeddings provided to build FAISS index"})
                 return
@@ -54,20 +55,12 @@ class FaissIndex:
             self.dimension = embeddings.shape[1]
             self.student_ids = student_ids
             self.names = names
-            logger.debug(f"Set dimension to {self.dimension}, student_ids: {len(self.student_ids)}, names: {len(self.names)}")
-            
-            # Create FAISS index (FlatL2 for CPU)
             self.index = faiss.IndexFlatL2(self.dimension)
-            logger.debug(f"Created FAISS index with dimension {self.dimension}")
-            logger.debug("Adding embeddings to FAISS index")
             self.index.add(embeddings)
             
-            # Save index to disk
-            logger.debug(f"Saving FAISS index to {FAISS_INDEX_PATH}")
             os.makedirs(os.path.dirname(FAISS_INDEX_PATH), exist_ok=True)
             faiss.write_index(self.index, FAISS_INDEX_PATH)
-            logger.info({"message": f"FAISS index built and saved to {FAISS_INDEX_PATH}", "embedding_count": len(embeddings), "dimension": self.dimension})
-            
+            logger.info({"message": f"FAISS index built and saved to {FAISS_INDEX_PATH}", "embedding_count": len(embeddings)})
         except Exception as e:
             logger.error({"error": str(e), "message": "Failed to build FAISS index"})
             raise
@@ -80,13 +73,8 @@ class FaissIndex:
             logger.debug(f"Attempting to load FAISS index from {FAISS_INDEX_PATH}")
             if os.path.exists(FAISS_INDEX_PATH):
                 self.index = faiss.read_index(FAISS_INDEX_PATH)
-                try:
-                    self.dimension = self.index.d
-                    logger.debug(f"Set dimension to {self.dimension} from loaded index")
-                except Exception as e:
-                    logger.error({"error": str(e), "message": "Failed to retrieve dimension from loaded index"})
-                    self.dimension = None
-                logger.info({"message": f"FAISS index loaded from {FAISS_INDEX_PATH}", "dimension": self.dimension})
+                self.dimension = self.index.d
+                logger.info({"message": f"FAISS index loaded from {FAISS_INDEX_PATH}"})
             else:
                 logger.warning({"message": f"No FAISS index found at {FAISS_INDEX_PATH}"})
                 self.index = None
@@ -106,34 +94,26 @@ class FaissIndex:
             name (str): Student name.
         """
         try:
-            logger.debug(f"Updating FAISS index with student_id: {student_id}, name: {name}, embedding shape: {embedding.shape}")
+            logger.debug(f"Updating FAISS index for student_id: {student_id}")
             if not isinstance(embedding, np.ndarray):
                 logger.error({"type": type(embedding), "message": f"Invalid embedding type for student {student_id}"})
                 raise ValueError("Embedding must be a numpy array")
             
             if self.index is None:
-                if self.dimension is None:
-                    self.dimension = embedding.shape[0]
-                    self.index = faiss.IndexFlatL2(self.dimension)
-                    logger.debug(f"Created new FAISS index with dimension {self.dimension}")
-                else:
-                    logger.error({"message": "Dimension not set for new index"})
-                    return
+                self.dimension = EMBEDDING_DIM
+                self.index = faiss.IndexFlatL2(self.dimension)
+                logger.debug(f"Created new FAISS index with dimension {self.dimension}")
             
             if embedding.shape[0] != self.dimension:
                 logger.error({"got": embedding.shape[0], "expected": self.dimension, "message": f"Embedding dimension mismatch for student {student_id}"})
                 raise ValueError(f"Embedding dimension must match index dimension ({self.dimension})")
             
-            logger.debug("Adding embedding to FAISS index")
             self.index.add(np.array([embedding], dtype=np.float32))
             self.student_ids.append(student_id)
             self.names.append(name)
             
-            # Save updated index
-            logger.debug(f"Saving updated FAISS index to {FAISS_INDEX_PATH}")
             faiss.write_index(self.index, FAISS_INDEX_PATH)
-            logger.info({"student_id": student_id, "message": "FAISS index updated", "embedding_count": self.index.ntotal, "dimension": self.dimension})
-            
+            logger.info({"student_id": student_id, "message": "FAISS index updated", "embedding_count": self.index.ntotal})
         except Exception as e:
             logger.error({"error": str(e), "message": f"Failed to update FAISS index for student {student_id}"})
 
@@ -149,7 +129,7 @@ class FaissIndex:
             Tuple[np.ndarray, np.ndarray]: Distances and indices of nearest neighbors.
         """
         try:
-            logger.debug(f"Searching FAISS index with embedding shape: {embedding.shape}, k={k}")
+            logger.debug(f"Searching FAISS index with k={k}")
             if self.index is None:
                 logger.warning({"message": "FAISS index not initialized"})
                 return None, None
@@ -166,9 +146,8 @@ class FaissIndex:
                 logger.error({"got": embedding.shape[1], "expected": self.dimension, "message": "Embedding dimension mismatch"})
                 raise ValueError(f"Embedding dimension must match index dimension ({self.dimension})")
             
-            logger.debug("Performing FAISS search")
             distances, indices = self.index.search(embedding, k)
-            logger.info({"message": "FAISS search completed", "distances": distances.tolist(), "indices": indices.tolist(), "dimension": self.dimension})
+            logger.info({"message": "FAISS search completed", "distances": distances.tolist(), "indices": indices.tolist()})
             return distances, indices
         except Exception as e:
             logger.error({"error": str(e), "message": "FAISS search failed"})

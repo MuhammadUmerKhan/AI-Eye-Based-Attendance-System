@@ -1,6 +1,6 @@
 import warnings
-from database import Database
-from logger import get_logger
+from src.database import Database
+from src.logger import get_logger
 
 # Ignore warnings
 warnings.filterwarnings("ignore")
@@ -24,7 +24,3 @@ def init_database():
     finally:
         logger.debug("Closing database connection in init_database")
         db.close_connection()
-
-if __name__ == "__main__":
-    success, message = init_database()
-    print(message)
