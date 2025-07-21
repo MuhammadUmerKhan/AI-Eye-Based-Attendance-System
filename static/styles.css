@@ -1,0 +1,170 @@
+/* General Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F9F7F3; /* Warm off-white background */
+    color: #264653; /* Deep charcoal text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Centered Layout for Streamlit */
+.stApp {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff; /* White container for contrast */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 2.5rem;
+    color: #000000; /* Black for title */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Subheader Styling */
+h2 {
+    font-size: 1.5rem;
+    color: #000000; /* Black for subheaders */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Tabs Styling */
+.stTabs [role="tablist"] {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.stTabs [role="tab"] {
+    background-color: #E9ECEF; /* Light gray for inactive tabs */
+    color: #264653; /* Deep charcoal text */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.stTabs [role="tab"][aria-selected="true"] {
+    background-color: #2A9D8F; /* Soft teal for active tab */
+    color: #ffffff; /* White text for contrast */
+    font-weight: 600;
+}
+
+.stTabs [role="tab"]:hover {
+    background-color: #DDE1E4; /* Slightly darker gray on hover */
+    cursor: pointer;
+}
+
+/* Form Styling */
+.stForm {
+    background-color: #F9F7F3; /* Warm off-white form background */
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #141414; /* Light gray border */
+}
+
+/* Input Fields */
+.stTextInput > div > div > input {
+    border: 2px solid #DDE1E4; /* Light gray border */
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #e0e4e8; /* Deep charcoal text */
+    transition: border-color 0.3s ease;
+}
+
+.stTextInput > div > div > input {
+    color: #ffffff !important; /* White text inside input */
+    background-color: #363738 !important; /* Optional: dark background for contrast */
+}
+/* File Uploader */
+.stFileUploader > div > div {
+    border: 2px dashed #DDE1E4; /* Light gray dashed border */
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    background-color: #F9F7F3; /* Warm off-white background */
+    transition: border-color 0.3s ease;
+}
+
+.stFileUploader > div > div:hover {
+    border-color: #2A9D8F; /* Soft teal on hover */
+}
+
+/* Button Styling */
+button[kind="primary"] {
+    background-color: #2A9D8F; /* Soft teal button */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[kind="primary"]:hover {
+    background-color: #247B7B; /* Darker teal on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Success and Error Messages */
+.stSuccess {
+    background-color: #E9F5DB; /* Light green for success */
+    color: #264653; /* Deep charcoal text */
+    border-left: 4px solid #2A9D8F; /* Teal border */
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.stError {
+    background-color: #FFE5E5; /* Soft coral for error */
+    color: #E76F51; /* Red text */
+    border-left: 4px solid #E76F51; /* Red border */
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* Force all headings to black (including inside forms) */
+h1, h2, h3, h4, h5, h6, label, .stTextInput label {
+    color: #000000 !important;
+}
+
+@keyframes balloonFade {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .stApp {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .stTabs [role="tab"] {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    button[kind="primary"] {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
