@@ -1,7 +1,7 @@
 import os
 import cv2
 import numpy as np
-from logger import get_logger
+from src.logger import get_logger
 
 # Configure logging
 logger = get_logger(__name__)
