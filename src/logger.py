@@ -1,0 +1,16 @@
+import logging
+import warnings
+
+# Ignore warnings
+warnings.filterwarnings("ignore")
+
+# Configure logging
+logging.basicConfig(
+    filename="../logs/attendance.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
+
+def get_logger(name):
+    """Return a logger instance."""
+    return logging.getLogger(name)
