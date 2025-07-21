@@ -1,4 +1,5 @@
 import streamlit as st
+import numpy as np
 from src.register_students import register_studentss
 from src.mark_attendance import mark_attendance
 from src.utils import save_image, cleanup_temp_image
@@ -8,38 +9,41 @@ from src.config import TRAIN_IMAGES_DIR, INPUT_IMAGES_DIR
 from src.logger import get_logger
 from src.db_setup import init_database
 from datetime import datetime
-import os, faiss, numpy as np
+from typing import Any
+import os, faiss
 
 # Configure logging
 logger = get_logger(__name__)
 
-# Initialize database
-logger.debug("Initializing database in app.py")
-success, message = init_database()
-if not success:
-    logger.error({"message": message})
-    st.error(message)
-    st.stop()
+# Initialize database and FAISS index once using session state
+if 'db' not in st.session_state:
+    logger.debug("Initializing database and FAISS index")
+    success, message = init_database()
+    if not success:
+        logger.error({"message": message})
+        st.error(message)
+        st.stop()
+    
+    st.session_state.db = Database()
+    
+    # Initialize FAISS index
+    st.session_state.faiss_index = FaissIndex()
+    students = st.session_state.db.fetch_students()
+    if students:
+        logger.debug(f"Building FAISS index with {len(students)} existing students")
+        embeddings = np.array([student['embedding'] for student in students], dtype=np.float32)
+        student_ids = [student['id'] for student in students]
+        names = [student['name'] for student in students]
+        st.session_state.faiss_index.build_index(embeddings, student_ids, names)
+    else:
+        logger.debug("No students found, initializing empty FAISS index with dimension 512")
+        st.session_state.faiss_index.dimension = 512
+        st.session_state.faiss_index.index = faiss.IndexFlatL2(512)
+        logger.info({"message": "Initialized empty FAISS index with dimension 512"})
 
-# Initialize database connection
-db = Database()
-
-# Initialize FAISS index
-logger.debug("Initializing FAISS index in app.py")
-faiss_index = FaissIndex()
-# Load or build FAISS index with existing students
-students = db.fetch_students()
-if students:
-    logger.debug("Building FAISS index with existing students")
-    embeddings = np.array([student['embedding'] for student in students], dtype=np.float32)
-    student_ids = [student['id'] for student in students]
-    names = [student['name'] for student in students]
-    faiss_index.build_index(embeddings, student_ids, names)
-else:
-    logger.debug("No students found, initializing empty FAISS index with dimension 512")
-    faiss_index.dimension = 512
-    faiss_index.index = faiss.IndexFlatL2(512)
-    logger.info({"message": "Initialized empty FAISS index with dimension 512"})
+# Reference cached instances
+db = st.session_state.db
+faiss_index = st.session_state.faiss_index
 
 st.set_page_config(page_title="AI Attendance System", layout="centered")
 
@@ -113,4 +117,5 @@ with tab2:
 
 # Close database connection on app shutdown
 if st.session_state.get('shutdown', False):
+    logger.debug("Closing database connection on app shutdown")
     db.close_connection()
