@@ -1,63 +1,207 @@
-2025-07-20 14:39:57,434 - WARNING - From C:\AI-Eye-Based-Attendance-System\.venv\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-07-20 14:39:59,504 - INFO - Loading faiss with AVX2 support.
-2025-07-20 14:39:59,536 - INFO - Successfully loaded faiss with AVX2 support.
-2025-07-20 14:39:59,545 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
-2025-07-20 14:39:59,547 - INFO - {'message': 'Database tables initialized'}
-2025-07-20 14:39:59,547 - INFO - {'message': 'Connected to SQLite database at ..\\database\\attendance.db'}
-2025-07-20 14:39:59,548 - INFO - {'message': 'Database tables initialized'}
-2025-07-20 14:39:59,548 - INFO - {'message': 'Connected to SQLite database at ..\\database\\attendance.db'}
-2025-07-20 14:39:59,548 - INFO - {'message': 'Database tables initialized'}
-2025-07-20 14:39:59,548 - INFO - {'message': 'Database initialized successfully'}
-2025-07-20 14:39:59,548 - INFO - {'message': 'Database connection closed'}
-2025-07-20 14:39:59,549 - INFO - Extracting embedding for image: ..\images\train_imgs\123.jpg
-2025-07-20 14:40:03,994 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
-2025-07-20 14:40:04,006 - INFO - {'student_id': '123', 'message': 'Student John Doe registered successfully', 'embedding_shape': (512,), 'embedding_dtype': 'float32', 'embedding_summary': '[-0.19283742, 0.4234904, -0.13443115, -0.39448246, 0.0984613, ..., -0.28931275, 0.054349188, -0.035751276, -0.3439401, -0.8825445]'}
-2025-07-20 14:40:04,006 - INFO - {'student_id': '123', 'message': 'Student John Doe (ID: 123) registered successfully', 'embedding_shape': (512,)}
-2025-07-20 14:40:04,007 - INFO - {'message': 'Student John Doe (ID: 123) registered successfully'}
-2025-07-20 14:40:04,007 - INFO - {'message': 'FaissIndex initialized successfully'}
-2025-07-20 14:40:04,008 - INFO - {'count': 1, 'message': 'Fetched student data'}
-2025-07-20 14:40:04,009 - INFO - {'message': 'FAISS index built and saved to ..\\database\\faiss_index.bin', 'embedding_count': 1, 'dimension': 512}
-2025-07-20 14:40:04,009 - INFO - Extracting embedding for image: ..\images\train_imgs\123.jpg
-2025-07-20 14:40:04,409 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
-2025-07-20 14:40:04,410 - INFO - {'student_id': '123', 'message': 'FAISS index updated', 'embedding_count': 2, 'dimension': 512}
-2025-07-20 14:40:04,411 - INFO - {'message': 'Database connection closed'}
-2025-07-20 14:40:49,868 - WARNING - From C:\AI-Eye-Based-Attendance-System\.venv\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-07-20 14:40:52,439 - INFO - Loading faiss with AVX2 support.
-2025-07-20 14:40:52,478 - INFO - Successfully loaded faiss with AVX2 support.
-2025-07-20 14:40:52,490 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
-2025-07-20 14:40:52,497 - INFO - {'message': 'Database tables initialized'}
-2025-07-20 14:40:52,497 - INFO - {'message': 'Connected to SQLite database at ..\\database\\attendance.db'}
-2025-07-20 14:40:52,498 - INFO - {'message': 'Fetching student data from database'}
-2025-07-20 14:40:52,498 - INFO - {'count': 1, 'message': 'Fetched student data'}
-2025-07-20 14:40:52,498 - INFO - {'student_id': '123', 'name': 'John Doe', 'message': 'Displayed student data', 'embedding_shape': (512,), 'embedding_dtype': 'float32', 'embedding_summary': '[-0.19283742, 0.4234904, -0.13443115, -0.39448246, 0.0984613, ..., -0.28931275, 0.054349188, -0.035751276, -0.3439401, -0.8825445]'}
-2025-07-20 14:40:52,500 - INFO - {'count': 1, 'message': 'Completed fetching and displaying students'}
-2025-07-20 14:40:52,500 - INFO - {'message': 'Database connection closed'}
-2025-07-20 14:41:15,399 - WARNING - From C:\AI-Eye-Based-Attendance-System\.venv\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-07-20 14:41:17,458 - INFO - Loading faiss with AVX2 support.
-2025-07-20 14:41:17,488 - INFO - Successfully loaded faiss with AVX2 support.
-2025-07-20 14:41:17,496 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
-2025-07-20 14:41:17,497 - INFO - {'message': 'Database tables initialized'}
-2025-07-20 14:41:17,497 - INFO - {'message': 'Connected to SQLite database at ..\\database\\attendance.db'}
-2025-07-20 14:41:17,498 - INFO - {'message': 'Database tables initialized'}
-2025-07-20 14:41:17,500 - INFO - {'message': 'Connected to SQLite database at ..\\database\\attendance.db'}
-2025-07-20 14:41:17,500 - INFO - {'message': 'Database tables initialized'}
-2025-07-20 14:41:17,500 - INFO - {'message': 'Database initialized successfully'}
-2025-07-20 14:41:17,500 - INFO - {'message': 'Database connection closed'}
-2025-07-20 14:41:17,500 - INFO - {'message': 'FaissIndex initialized successfully'}
-2025-07-20 14:41:17,500 - INFO - {'count': 1, 'message': 'Fetched student data'}
-2025-07-20 14:41:17,502 - INFO - {'message': 'FAISS index built and saved to ..\\database\\faiss_index.bin', 'embedding_count': 1, 'dimension': 512}
-2025-07-20 14:41:17,502 - INFO - Extracting embedding for image: ..\images\train_imgs\123.jpg
-2025-07-20 14:41:21,963 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
-2025-07-20 14:41:21,964 - INFO - {'student_id': '123', 'message': 'FAISS index updated', 'embedding_count': 2, 'dimension': 512}
-2025-07-20 14:41:21,964 - INFO - Extracting embedding for image: ..\images\train_imgs\123.jpg
-2025-07-20 14:41:22,370 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
-2025-07-20 14:41:22,370 - INFO - {'count': 1, 'message': 'Fetched student data'}
-2025-07-20 14:41:22,370 - INFO - {'count': 1, 'message': 'Fetched student data for attendance', 'query_embedding_shape': (512,)}
-2025-07-20 14:41:22,409 - INFO - {'message': 'FAISS search completed', 'distances': [[0.0]], 'indices': [[0]], 'dimension': 512}
-2025-07-20 14:41:22,419 - INFO - {'student_id': '123', 'message': 'Attendance marked'}
-2025-07-20 14:41:22,419 - INFO - {'student_id': '123', 'name': 'John Doe', 'distance': 0.0, 'message': 'Attendance marked for John Doe'}
-2025-07-20 14:41:22,420 - INFO - {'message': 'Attendance marked for John Doe (ID: 123)'}
-2025-07-20 14:41:22,420 - INFO - {'message': 'Database connection closed'}
+2025-07-21 12:14:23,582 - INFO - Loading faiss with AVX2 support.
+2025-07-21 12:14:23,615 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-21 12:14:23,625 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-21 12:14:23,680 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:14:23,681 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 12:14:23,681 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:14:23,681 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 12:14:23,681 - INFO - {'message': 'Database connection closed'}
+2025-07-21 12:14:23,684 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:14:23,684 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 12:14:23,685 - INFO - {'message': 'FAISS index loaded from database\\faiss_index.bin'}
+2025-07-21 12:14:23,685 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 12:14:23,686 - ERROR - {'error': 'no such column: department', 'message': 'Error fetching students'}
+2025-07-21 12:14:23,687 - INFO - {'message': 'Initialized empty FAISS index with dimension 512'}
+2025-07-21 12:14:39,014 - INFO - {'message': 'Image saved to images\\train_imgs\\AI\\123.jpg'}
+2025-07-21 12:14:39,015 - INFO - {'roll_no': '123', 'course_id': 'AI', 'message': '\U0001f5bc\ufe0f Image saved at images\\train_imgs\\AI\\123.jpg'}
+2025-07-21 12:14:39,015 - INFO - Extracting embedding for image
+2025-07-21 12:14:45,424 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 12:14:45,424 - ERROR - {'student_id': '123', 'course_id': 'AI', 'error': '6 values for 5 columns', 'message': 'Failed to register student'}
+2025-07-21 12:14:45,425 - ERROR - {'student_id': '123', 'course_id': 'AI', 'message': 'Database error: 6 values for 5 columns'}
+2025-07-21 12:14:45,425 - ERROR - {'roll_no': '123', 'course_id': 'AI', 'message': '\u274c Database error: 6 values for 5 columns'}
+2025-07-21 12:16:18,680 - INFO - {'message': 'Image saved to images\\train_imgs\\AI\\123.jpg'}
+2025-07-21 12:16:18,681 - INFO - {'roll_no': '123', 'course_id': 'AI', 'message': '\U0001f5bc\ufe0f Image saved at images\\train_imgs\\AI\\123.jpg'}
+2025-07-21 12:16:18,683 - INFO - Extracting embedding for image
+2025-07-21 12:16:19,457 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 12:16:19,458 - ERROR - {'student_id': '123', 'course_id': 'AI', 'error': '6 values for 5 columns', 'message': 'Failed to register student'}
+2025-07-21 12:16:19,458 - ERROR - {'student_id': '123', 'course_id': 'AI', 'message': 'Database error: 6 values for 5 columns'}
+2025-07-21 12:16:19,458 - ERROR - {'roll_no': '123', 'course_id': 'AI', 'message': '\u274c Database error: 6 values for 5 columns'}
+2025-07-21 12:23:20,623 - INFO - Loading faiss with AVX2 support.
+2025-07-21 12:23:20,657 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-21 12:23:20,666 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-21 12:23:20,731 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:23:20,732 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 12:23:20,732 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:23:20,732 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 12:23:20,733 - INFO - {'message': 'Database connection closed'}
+2025-07-21 12:23:20,736 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:23:20,736 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 12:23:20,738 - INFO - {'message': 'FAISS index loaded from database\\faiss_index.bin'}
+2025-07-21 12:23:20,738 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 12:23:20,739 - INFO - {'count': 0, 'message': 'Fetched student data'}
+2025-07-21 12:23:20,739 - INFO - {'message': 'Initialized empty FAISS index with dimension 512'}
+2025-07-21 12:24:03,018 - INFO - {'message': 'Image saved to images\\train_imgs\\AI\\123.jpg'}
+2025-07-21 12:24:03,019 - INFO - {'roll_no': '123', 'course_id': 'AI', 'message': '\U0001f5bc\ufe0f Image saved at images\\train_imgs\\AI\\123.jpg'}
+2025-07-21 12:24:03,020 - INFO - Extracting embedding for image
+2025-07-21 12:24:09,026 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 12:24:09,046 - INFO - {'student_id': '123', 'course_id': 'AI', 'message': 'Student umer registered successfully'}
+2025-07-21 12:24:09,050 - INFO - {'student_id': '123', 'message': 'FAISS index updated', 'embedding_count': 1}
+2025-07-21 12:24:09,050 - INFO - {'student_id': '123', 'course_id': 'AI', 'message': 'Student umer (ID: 123) registered successfully for Artificial Intelligence and FAISS index updated'}
+2025-07-21 12:24:09,050 - INFO - {'roll_no': '123', 'course_id': 'AI', 'message': '\u2705 Student umer (ID: 123) registered successfully for Artificial Intelligence and FAISS index updated'}
+2025-07-21 12:25:11,056 - INFO - {'message': 'Image saved to images\\input_imgs\\AI\\123.jpg'}
+2025-07-21 12:25:11,057 - INFO - {'roll_no': '123', 'course_id': 'AI', 'message': '\U0001f5bc\ufe0f Image saved at images\\input_imgs\\AI\\123.jpg'}
+2025-07-21 12:25:11,058 - ERROR - {'student_id': '123', 'course_id': 'AI', 'message': 'Student 123 already registered in course AI'}
+2025-07-21 12:25:11,058 - ERROR - {'roll_no': '123', 'course_id': 'AI', 'message': '\u274c Student 123 is already registered in course Artificial Intelligence'}
+2025-07-21 12:25:24,586 - INFO - {'message': 'Image saved to images\\input_imgs\\AI\\121.jpg'}
+2025-07-21 12:25:24,588 - INFO - {'roll_no': '121', 'course_id': 'AI', 'message': '\U0001f5bc\ufe0f Image saved at images\\input_imgs\\AI\\121.jpg'}
+2025-07-21 12:25:24,589 - INFO - Extracting embedding for image
+2025-07-21 12:25:25,136 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 12:25:25,149 - INFO - {'student_id': '121', 'course_id': 'AI', 'message': 'Student umer registered successfully'}
+2025-07-21 12:25:25,150 - INFO - {'student_id': '121', 'message': 'FAISS index updated', 'embedding_count': 2}
+2025-07-21 12:25:25,150 - INFO - {'student_id': '121', 'course_id': 'AI', 'message': 'Student umer (ID: 121) registered successfully for Artificial Intelligence and FAISS index updated'}
+2025-07-21 12:25:25,150 - INFO - {'roll_no': '121', 'course_id': 'AI', 'message': '\u2705 Student umer (ID: 121) registered successfully for Artificial Intelligence and FAISS index updated'}
+2025-07-21 12:38:42,945 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:38:42,945 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 12:38:42,946 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:38:42,946 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 12:38:42,946 - INFO - {'message': 'Database connection closed'}
+2025-07-21 12:38:42,949 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:38:42,950 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 12:38:42,951 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 12:38:42,954 - INFO - {'count': 2, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 12:38:42,956 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 2}
+2025-07-21 12:38:42,957 - INFO - {'count': 0, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 12:38:42,957 - WARNING - {'course_id': 'GD', 'message': 'No FAISS index found at database\\faiss_index_GD.bin'}
+2025-07-21 12:38:42,957 - INFO - {'message': 'Initialized FAISS indices for all courses'}
+2025-07-21 12:38:55,515 - INFO - {'message': 'Image saved to images\\train_imgs\\AI\\031.jpg'}
+2025-07-21 12:38:55,517 - INFO - {'roll_no': '031', 'course_id': 'AI', 'message': '\U0001f5bc\ufe0f Image saved at images\\train_imgs\\AI\\031.jpg'}
+2025-07-21 12:38:55,517 - INFO - Extracting embedding for image
+2025-07-21 12:38:55,556 - ERROR - {'error': "OpenCV(4.11.0) D:\\a\\opencv-python\\opencv-python\\opencv\\modules\\imgcodecs\\src\\loadsave.cpp:993: error: (-215:Assertion failed) !buf.empty() in function 'cv::imdecode_'\n", 'message': 'Failed to crop eye region'}
+2025-07-21 12:38:55,556 - WARNING - {'message': 'Failed to detect eye region'}
+2025-07-21 12:38:55,557 - WARNING - {'error': 'Failed to detect eye region', 'message': 'Registration failed for student 031 in course AI'}
+2025-07-21 12:38:55,557 - ERROR - {'roll_no': '031', 'course_id': 'AI', 'message': '\u274c Failed to detect eye region'}
+2025-07-21 12:39:17,416 - INFO - {'message': 'Image saved to images\\train_imgs\\AI\\031.jpg'}
+2025-07-21 12:39:17,416 - INFO - {'roll_no': '031', 'course_id': 'AI', 'message': '\U0001f5bc\ufe0f Image saved at images\\train_imgs\\AI\\031.jpg'}
+2025-07-21 12:39:17,417 - INFO - Extracting embedding for image
+2025-07-21 12:39:17,924 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 12:39:17,952 - INFO - {'student_id': '031', 'course_id': 'AI', 'message': 'Student umer registered successfully'}
+2025-07-21 12:39:17,955 - INFO - {'student_id': '031', 'course_id': 'AI', 'message': 'FAISS index updated', 'embedding_count': 3}
+2025-07-21 12:39:17,955 - INFO - {'student_id': '031', 'course_id': 'AI', 'message': 'Student umer (ID: 031) registered successfully for Artificial Intelligence and FAISS index updated'}
+2025-07-21 12:39:17,955 - INFO - {'roll_no': '031', 'course_id': 'AI', 'message': '\u2705 Student umer (ID: 031) registered successfully for Artificial Intelligence and FAISS index updated'}
+2025-07-21 12:40:52,793 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:40:52,793 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 12:40:52,795 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:40:52,796 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 12:40:52,796 - INFO - {'message': 'Database connection closed'}
+2025-07-21 12:40:52,798 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:40:52,798 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 12:40:52,799 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 12:40:52,801 - INFO - {'count': 3, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 12:40:52,803 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 3}
+2025-07-21 12:40:52,803 - INFO - {'count': 0, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 12:40:52,804 - WARNING - {'course_id': 'GD', 'message': 'No FAISS index found at database\\faiss_index_GD.bin'}
+2025-07-21 12:40:52,804 - INFO - {'message': 'Initialized FAISS indices for all courses'}
+2025-07-21 12:41:07,554 - INFO - {'message': 'Image saved to images\\input_imgs\\AI\\032.jpg'}
+2025-07-21 12:41:07,555 - INFO - {'roll_no': '032', 'course_id': 'AI', 'message': '\U0001f5bc\ufe0f Image saved at images\\input_imgs\\AI\\032.jpg'}
+2025-07-21 12:41:07,556 - INFO - Extracting embedding for image
+2025-07-21 12:41:08,052 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 12:41:08,063 - INFO - {'student_id': '032', 'course_id': 'AI', 'message': 'Student umer registered successfully'}
+2025-07-21 12:41:08,066 - INFO - {'student_id': '032', 'course_id': 'AI', 'message': 'FAISS index updated', 'embedding_count': 4}
+2025-07-21 12:41:08,066 - INFO - {'student_id': '032', 'course_id': 'AI', 'message': 'Student umer (ID: 032) registered successfully for Artificial Intelligence and FAISS index updated'}
+2025-07-21 12:41:08,067 - INFO - {'roll_no': '032', 'course_id': 'AI', 'message': '\u2705 Student umer (ID: 032) registered successfully for Artificial Intelligence and FAISS index updated'}
+2025-07-21 12:41:16,400 - INFO - {'message': 'Image saved to images\\input_imgs\\temp_20250721_124116.jpg'}
+2025-07-21 12:41:16,401 - INFO - {'message': '\U0001f5bc\ufe0f Temporary image saved at images\\input_imgs\\temp_20250721_124116.jpg'}
+2025-07-21 12:41:16,401 - INFO - Extracting embedding for image
+2025-07-21 12:41:16,916 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 12:41:16,916 - INFO - {'count': 4, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 12:41:16,916 - INFO - {'count': 4, 'message': 'Fetched student data for attendance in course AI'}
+2025-07-21 12:41:16,955 - INFO - {'course_id': 'AI', 'message': 'FAISS search completed', 'distances': [[0.0]], 'indices': [[0]]}
+2025-07-21 12:41:16,968 - INFO - {'student_id': '123', 'course_id': 'AI', 'message': 'Attendance marked'}
+2025-07-21 12:41:16,969 - INFO - {'student_id': '123', 'name': 'umer', 'course_id': 'AI', 'distance': 0.0, 'message': 'Attendance marked for umer'}
+2025-07-21 12:41:16,969 - INFO - {'message': '\u2705 Attendance marked for umer (ID: 123) in course AI'}
+2025-07-21 12:41:16,970 - INFO - {'message': 'Temporary image deleted: images\\input_imgs\\temp_20250721_124116.jpg'}
+2025-07-21 12:46:30,199 - INFO - Loading faiss with AVX2 support.
+2025-07-21 12:46:30,236 - INFO - Successfully loaded faiss with AVX2 support.
+2025-07-21 12:46:30,246 - INFO - Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2025-07-21 12:46:30,289 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:46:30,290 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 12:46:30,290 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:46:30,290 - INFO - {'message': 'Database initialized successfully'}
+2025-07-21 12:46:30,290 - INFO - {'message': 'Database connection closed'}
+2025-07-21 12:46:30,293 - INFO - {'message': 'Database tables initialized'}
+2025-07-21 12:46:30,293 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-07-21 12:46:30,294 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-07-21 12:46:30,295 - INFO - {'count': 0, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 12:46:30,295 - WARNING - {'course_id': 'AI', 'message': 'No FAISS index found at database\\faiss_index_AI.bin'}
+2025-07-21 12:46:30,295 - INFO - {'count': 0, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 12:46:30,296 - WARNING - {'course_id': 'GD', 'message': 'No FAISS index found at database\\faiss_index_GD.bin'}
+2025-07-21 12:46:30,296 - INFO - {'message': 'Initialized FAISS indices for all courses'}
+2025-07-21 12:46:54,147 - INFO - {'message': 'Image saved to images\\input_imgs\\AI\\123.jpg'}
+2025-07-21 12:46:54,148 - INFO - {'roll_no': '123', 'course_id': 'AI', 'message': '\U0001f5bc\ufe0f Image saved at images\\input_imgs\\AI\\123.jpg'}
+2025-07-21 12:46:54,149 - INFO - Extracting embedding for image
+2025-07-21 12:46:59,158 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 12:46:59,176 - INFO - {'student_id': '123', 'course_id': 'AI', 'message': 'Student Umer registered successfully'}
+2025-07-21 12:46:59,178 - INFO - {'student_id': '123', 'course_id': 'AI', 'message': 'FAISS index updated', 'embedding_count': 1}
+2025-07-21 12:46:59,178 - INFO - {'student_id': '123', 'course_id': 'AI', 'message': 'Student Umer (ID: 123) registered successfully for Artificial Intelligence and FAISS index updated'}
+2025-07-21 12:46:59,178 - INFO - {'roll_no': '123', 'course_id': 'AI', 'message': '\u2705 Student Umer (ID: 123) registered successfully for Artificial Intelligence and FAISS index updated'}
+2025-07-21 12:47:10,717 - INFO - {'message': 'Image saved to images\\input_imgs\\temp_20250721_124710.jpg'}
+2025-07-21 12:47:10,720 - INFO - {'message': '\U0001f5bc\ufe0f Temporary image saved at images\\input_imgs\\temp_20250721_124710.jpg'}
+2025-07-21 12:47:10,721 - INFO - Extracting embedding for image
+2025-07-21 12:47:11,783 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 12:47:11,783 - INFO - {'count': 1, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 12:47:11,783 - INFO - {'count': 1, 'message': 'Fetched student data for attendance in course AI'}
+2025-07-21 12:47:11,817 - INFO - {'course_id': 'AI', 'message': 'FAISS search completed', 'distances': [[1.0383543968200684]], 'indices': [[0]]}
+2025-07-21 12:47:11,817 - WARNING - {'distance': 1.0383544, 'course_id': 'AI', 'message': 'No match found (distance: 1.04)'}
+2025-07-21 12:47:11,818 - WARNING - {'message': '\u274c Sorry, you are not registered in this course'}
+2025-07-21 12:47:11,820 - INFO - {'message': 'Temporary image deleted: images\\input_imgs\\temp_20250721_124710.jpg'}
+2025-07-21 12:47:21,711 - INFO - {'message': 'Image saved to images\\input_imgs\\temp_20250721_124721.jpg'}
+2025-07-21 12:47:21,712 - INFO - {'message': '\U0001f5bc\ufe0f Temporary image saved at images\\input_imgs\\temp_20250721_124721.jpg'}
+2025-07-21 12:47:21,712 - INFO - Extracting embedding for image
+2025-07-21 12:47:22,326 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 12:47:22,328 - INFO - {'count': 1, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 12:47:22,328 - INFO - {'count': 1, 'message': 'Fetched student data for attendance in course AI'}
+2025-07-21 12:47:22,328 - INFO - {'course_id': 'AI', 'message': 'FAISS search completed', 'distances': [[0.0]], 'indices': [[0]]}
+2025-07-21 12:47:22,348 - INFO - {'student_id': '123', 'course_id': 'AI', 'message': 'Attendance marked'}
+2025-07-21 12:47:22,349 - INFO - {'student_id': '123', 'name': 'Umer', 'course_id': 'AI', 'distance': 0.0, 'message': 'Attendance marked for Umer'}
+2025-07-21 12:47:22,349 - INFO - {'message': '\u2705 Attendance marked for Umer (ID: 123) in course AI'}
+2025-07-21 12:47:22,352 - INFO - {'message': 'Temporary image deleted: images\\input_imgs\\temp_20250721_124721.jpg'}
+2025-07-21 12:47:40,507 - INFO - {'message': 'Image saved to images\\input_imgs\\GD\\123.jpg'}
+2025-07-21 12:47:40,509 - INFO - {'roll_no': '123', 'course_id': 'GD', 'message': '\U0001f5bc\ufe0f Image saved at images\\input_imgs\\GD\\123.jpg'}
+2025-07-21 12:47:40,510 - INFO - Extracting embedding for image
+2025-07-21 12:47:41,755 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 12:47:41,774 - INFO - {'student_id': '123', 'course_id': 'GD', 'message': 'Student Zuhair registered successfully'}
+2025-07-21 12:47:41,776 - INFO - {'student_id': '123', 'course_id': 'GD', 'message': 'FAISS index updated', 'embedding_count': 1}
+2025-07-21 12:47:41,776 - INFO - {'student_id': '123', 'course_id': 'GD', 'message': 'Student Zuhair (ID: 123) registered successfully for Graphic Design and FAISS index updated'}
+2025-07-21 12:47:41,776 - INFO - {'roll_no': '123', 'course_id': 'GD', 'message': '\u2705 Student Zuhair (ID: 123) registered successfully for Graphic Design and FAISS index updated'}
+2025-07-21 12:47:41,827 - INFO - {'message': 'Image saved to images\\input_imgs\\temp_20250721_124741.jpg'}
+2025-07-21 12:47:41,828 - INFO - {'message': '\U0001f5bc\ufe0f Temporary image saved at images\\input_imgs\\temp_20250721_124741.jpg'}
+2025-07-21 12:47:41,828 - INFO - Extracting embedding for image
+2025-07-21 12:47:42,376 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 12:47:42,377 - INFO - {'count': 1, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-07-21 12:47:42,377 - INFO - {'count': 1, 'message': 'Fetched student data for attendance in course AI'}
+2025-07-21 12:47:42,377 - INFO - {'course_id': 'AI', 'message': 'FAISS search completed', 'distances': [[0.0]], 'indices': [[0]]}
+2025-07-21 12:47:42,397 - INFO - {'student_id': '123', 'course_id': 'AI', 'message': 'Attendance marked'}
+2025-07-21 12:47:42,397 - INFO - {'student_id': '123', 'name': 'Umer', 'course_id': 'AI', 'distance': 0.0, 'message': 'Attendance marked for Umer'}
+2025-07-21 12:47:42,398 - INFO - {'message': '\u2705 Attendance marked for Umer (ID: 123) in course AI'}
+2025-07-21 12:47:42,401 - INFO - {'message': 'Temporary image deleted: images\\input_imgs\\temp_20250721_124741.jpg'}
+2025-07-21 12:47:53,522 - INFO - {'message': 'Image saved to images\\input_imgs\\temp_20250721_124753.jpg'}
+2025-07-21 12:47:53,523 - INFO - {'message': '\U0001f5bc\ufe0f Temporary image saved at images\\input_imgs\\temp_20250721_124753.jpg'}
+2025-07-21 12:47:53,523 - INFO - Extracting embedding for image
+2025-07-21 12:47:54,165 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 12:47:54,165 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 12:47:54,165 - INFO - {'count': 1, 'message': 'Fetched student data for attendance in course GD'}
+2025-07-21 12:47:54,166 - INFO - {'course_id': 'GD', 'message': 'FAISS search completed', 'distances': [[1.0383543968200684]], 'indices': [[0]]}
+2025-07-21 12:47:54,166 - WARNING - {'distance': 1.0383544, 'course_id': 'GD', 'message': 'No match found (distance: 1.04)'}
+2025-07-21 12:47:54,167 - WARNING - {'message': '\u274c Sorry, you are not registered in this course'}
+2025-07-21 12:47:54,169 - INFO - {'message': 'Temporary image deleted: images\\input_imgs\\temp_20250721_124753.jpg'}
+2025-07-21 12:47:58,881 - INFO - {'message': 'Image saved to images\\input_imgs\\temp_20250721_124758.jpg'}
+2025-07-21 12:47:58,884 - INFO - {'message': '\U0001f5bc\ufe0f Temporary image saved at images\\input_imgs\\temp_20250721_124758.jpg'}
+2025-07-21 12:47:58,884 - INFO - Extracting embedding for image
+2025-07-21 12:48:00,133 - INFO - {'message': 'Embedding extracted successfully', 'embedding_shape': (512,)}
+2025-07-21 12:48:00,133 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-07-21 12:48:00,133 - INFO - {'count': 1, 'message': 'Fetched student data for attendance in course GD'}
+2025-07-21 12:48:00,133 - INFO - {'course_id': 'GD', 'message': 'FAISS search completed', 'distances': [[0.0]], 'indices': [[0]]}
+2025-07-21 12:48:00,152 - INFO - {'student_id': '123', 'course_id': 'GD', 'message': 'Attendance marked'}
+2025-07-21 12:48:00,152 - INFO - {'student_id': '123', 'name': 'Zuhair', 'course_id': 'GD', 'distance': 0.0, 'message': 'Attendance marked for Zuhair'}
+2025-07-21 12:48:00,152 - INFO - {'message': '\u2705 Attendance marked for Zuhair (ID: 123) in course GD'}
+2025-07-21 12:48:00,155 - INFO - {'message': 'Temporary image deleted: images\\input_imgs\\temp_20250721_124758.jpg'}
