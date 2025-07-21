@@ -8,6 +8,7 @@ from src.database import Database
 from src.logger import get_logger
 import numpy as np
 import warnings
+from typing import Optional
 
 # Ignore warnings
 warnings.filterwarnings("ignore")
@@ -54,7 +55,7 @@ def main():
             
             course_id = "AI"
             course_name = COURSES[course_id]
-            image_path = os.path.join(get_train_images_dir(course_id), "123.jpg")
+            image_path = os.path.join(get_train_images_dir(course_id), "1234.jpg")
             faiss_index = FaissIndex()
             
             logger.debug(f"Fetching students for course {course_id}")
@@ -83,7 +84,7 @@ def main():
                     print(f"Error: Unexpected embedding dimension {embedding.shape[0]}")
                     return
                 embedding = embedding.astype(np.float32)
-                success, message = register_student(db, "123", "John Doe", course_id, course_name, image_path, faiss_index)
+                success, message = register_student(db, 1234, "John Doe", course_id, course_name, image_path, faiss_index)
                 if not success:
                     logger.error({"error": message, "message": "Failed to register student"})
                     print(f"Error: {message}")

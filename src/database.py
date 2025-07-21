@@ -39,7 +39,7 @@ class Database:
             with self.connection:
                 self.cursor.execute("""
                     CREATE TABLE IF NOT EXISTS students (
-                        id TEXT NOT NULL,
+                        id INTEGER NOT NULL,
                         name TEXT NOT NULL,
                         course_id TEXT NOT NULL,
                         course_name TEXT NOT NULL,
@@ -50,7 +50,7 @@ class Database:
                 self.cursor.execute("""
                     CREATE TABLE IF NOT EXISTS attendance (
                         id INTEGER PRIMARY KEY AUTOINCREMENT,
-                        student_id TEXT NOT NULL,
+                        student_id INTEGER NOT NULL,
                         timestamp TEXT NOT NULL,
                         course_id TEXT NOT NULL,
                         FOREIGN KEY (student_id, course_id) REFERENCES students (id, course_id)
@@ -61,7 +61,7 @@ class Database:
             logger.error({"error": str(e), "message": "Failed to initialize tables"})
             raise
 
-    def check_duplicate(self, student_id: str, course_id: str) -> bool:
+    def check_duplicate(self, student_id: int, course_id: str) -> bool:
         """Check if a student is already registered for a course."""
         try:
             logger.debug(f"Checking for duplicate student {student_id} in course {course_id}")
@@ -77,7 +77,7 @@ class Database:
             logger.error({"error": str(e), "message": f"Error checking duplicate for student {student_id} in course {course_id}"})
             return False
 
-    def register_student(self, student_id: str, name: str, course_id: str, course_name: str, embedding: np.ndarray) -> Tuple[bool, str]:
+    def register_student(self, student_id: int, name: str, course_id: str, course_name: str, embedding: np.ndarray) -> Tuple[bool, str]:
         """📝 Register a student in the database."""
         try:
             logger.debug(f"Registering student {student_id}, name: {name}, course_id: {course_id}")
@@ -142,7 +142,7 @@ class Database:
             logger.error({"error": str(e), "message": "Unexpected error fetching students"})
             return None
 
-    def mark_attendance(self, student_id: str, timestamp: str, course_id: str) -> Tuple[bool, str]:
+    def mark_attendance(self, student_id: int, timestamp: str, course_id: str) -> Tuple[bool, str]:
         """✅ Mark attendance for a student."""
         try:
             logger.debug(f"Marking attendance for student_id: {student_id}, course_id: {course_id}, timestamp: {timestamp}")
