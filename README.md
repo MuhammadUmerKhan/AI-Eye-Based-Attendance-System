@@ -1,6 +1,6 @@
 # 📸 AI Eye-Based Attendance System 🚀
 
-![](https://fortunaimpex.com/wp-content/uploads/2024/05/5597107_56387-1024x642.jpg)
+![](https://faceitsystems.com/wp-content/uploads/2024/06/5597099_56379-420x300.jpg)
 
 Welcome to the **AI Eye-Based Attendance System**, a cutting-edge solution for automated attendance tracking using facial recognition with a focus on eye region embeddings. This project leverages advanced computer vision and machine learning to register students, store their embeddings, and mark attendance efficiently. Built with Python, it integrates `DeepFace`, `MediaPipe`, `FAISS`, and `Streamlit` for a robust and user-friendly experience. 🌟
 
