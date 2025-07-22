@@ -41,7 +41,7 @@ To run the project, ensure you have the following installed:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-repo/ai-eye-based-attendance-system.git
+   git clone https://github.com/MuhammadUmerKhan/AI-Eye-Based-Attendance-System
    cd ai-eye-based-attendance-system
    ```
 
