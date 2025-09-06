@@ -393,3 +393,41 @@
 2025-07-21 16:39:53,771 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 2}
 2025-07-21 16:39:53,772 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
 2025-07-21 16:39:53,773 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}
+2025-09-06 12:31:17,875 - INFO - Loading faiss with AVX2 support.
+2025-09-06 12:31:18,261 - INFO - Successfully loaded faiss with AVX2 support.
+2025-09-06 12:31:19,113 - INFO - {'message': 'Database tables initialized'}
+2025-09-06 12:31:19,115 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-09-06 12:31:19,117 - INFO - {'message': 'Database tables initialized'}
+2025-09-06 12:31:19,118 - INFO - {'message': 'Database initialized successfully'}
+2025-09-06 12:31:19,119 - INFO - {'message': 'Database connection closed'}
+2025-09-06 12:31:19,120 - INFO - {'message': 'Database tables initialized'}
+2025-09-06 12:31:19,121 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-09-06 12:31:19,122 - INFO - {'message': 'Database tables initialized'}
+2025-09-06 12:31:19,122 - INFO - {'message': 'Database initialized successfully'}
+2025-09-06 12:31:19,123 - INFO - {'message': 'Database tables initialized'}
+2025-09-06 12:31:19,124 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-09-06 12:31:19,124 - INFO - {'message': 'Database connection closed'}
+2025-09-06 12:31:19,125 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-09-06 12:31:19,129 - INFO - {'count': 2, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-09-06 12:31:19,130 - INFO - {'message': 'Database tables initialized'}
+2025-09-06 12:31:19,130 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-09-06 12:31:19,131 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-09-06 12:31:19,133 - INFO - {'count': 2, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-09-06 12:31:19,138 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 2}
+2025-09-06 12:31:19,139 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-09-06 12:31:19,140 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 2}
+2025-09-06 12:31:19,141 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-09-06 12:31:19,145 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}
+2025-09-06 12:31:19,147 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}
+2025-09-06 12:31:35,566 - INFO - {'message': 'Database tables initialized'}
+2025-09-06 12:31:35,567 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-09-06 12:31:35,568 - INFO - {'message': 'Database tables initialized'}
+2025-09-06 12:31:35,574 - INFO - {'message': 'Database initialized successfully'}
+2025-09-06 12:31:35,575 - INFO - {'message': 'Database connection closed'}
+2025-09-06 12:31:35,586 - INFO - {'message': 'Database tables initialized'}
+2025-09-06 12:31:35,586 - INFO - {'message': 'Connected to SQLite database at database\\attendance.db'}
+2025-09-06 12:31:35,587 - INFO - {'message': 'FaissIndex initialized successfully'}
+2025-09-06 12:31:35,588 - INFO - {'count': 2, 'course_id': 'AI', 'message': 'Fetched student data'}
+2025-09-06 12:31:35,593 - INFO - {'course_id': 'AI', 'message': 'FAISS index built and saved to database\\faiss_index_AI.bin', 'embedding_count': 2}
+2025-09-06 12:31:35,597 - INFO - {'count': 1, 'course_id': 'GD', 'message': 'Fetched student data'}
+2025-09-06 12:31:35,603 - INFO - {'course_id': 'GD', 'message': 'FAISS index built and saved to database\\faiss_index_GD.bin', 'embedding_count': 1}

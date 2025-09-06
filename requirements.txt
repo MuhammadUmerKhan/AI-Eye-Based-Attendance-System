@@ -1,2 +1,5 @@
 mediapipe
 deepface==0.0.93
+streamlit
+tf-keras
+faiss-cpu

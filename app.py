@@ -25,11 +25,6 @@ st.markdown("<div class='title'>📸 AI Attendance System</div>", unsafe_allow_h
 with st.sidebar:
     st.markdown("<h3 style='color: #ff6f61;'>📚 About the Project</h3>", unsafe_allow_html=True)
     st.markdown("The AI Attendance System leverages facial recognition technology to streamline student registration and attendance tracking. Built with advanced AI, it ensures accurate and efficient management of course attendance.")
-    st.markdown("---")
-    st.markdown("<h4 style='color: #ff6f61;'>Developed by:</h4>", unsafe_allow_html=True)
-    st.markdown("- Muhammad Umer Khan")
-    st.markdown("- Zuhain Khan")
-    st.markdown("- Muhammad Ahsan Siddiqui")
 
 # ---------- Initialize Logger, DB, FAISS ----------
 logger = get_logger(__name__)
